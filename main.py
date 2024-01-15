@@ -21,9 +21,11 @@ def main(nome_arquivo):
         alunos for alunos in constantes if alunos.get('media') < 7.5
         ]
     
-    alunos_dicionario = [{'exemplares': exemplares}, 
-                         {'acima_media': acima_media}, 
-                         {'abaixo_media': abaixo_media}]
+    alunos_dicionario = [
+            {'exemplares': exemplares}, 
+            {'acima_media': acima_media}, 
+            {'abaixo_media': abaixo_media}
+        ]
     
     for lista in alunos_dicionario:
         escrever(nome_arquivo, json.dumps(lista, indent=4))
